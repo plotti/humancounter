@@ -13,5 +13,7 @@ Spark Human Counter
 - https://openhomeautomation.net/cloud-data-logger-particle-photon/
 
 # Live Graphing
+- Index.html is based on https://community.particle.io/t/tutorial-getting-started-with-spark-publish/3422
 - Either simply go to http://console.particle.io
 - or run index.html http://bl.ocks.org/d3noob/6bd13f974d6516f3e491
+- http://nvd3.org
