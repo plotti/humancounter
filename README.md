@@ -22,12 +22,11 @@ Spark Human Counter
 
 Stream
 ```
-curl https://api.particle.io/v1/devices/events?access_token=751d57b929c62356ab056ef06536a8c77b6891bb
-=>
+curl "https://api.spark.io/v1/devices/240034001147343339383037/events/?access_token=800efcf08f1f961e4438ece0da1a20bc5ccfb4f4"
 :ok
 
 
-
-
+event: humancount
+data: {"data":"742","ttl":"60","published_at":"2016-09-19T11:39:46.644Z","coreid":"240034001147343339383037"}
 ```  
 
