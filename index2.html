@@ -24,12 +24,12 @@
             console.log("Received Stuff!" + e);
 
             var parsedData = JSON.parse(e.data);
-            var tsSpan   = document.getElementById("tstamp");
+            var tsSpan   = document.getElementById("published_at");
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Time');
             data.addColumn('number', 'Humans');
 
-            data.addRow([(new Date(tsSpan)),1]);
+            data.addRow([(Date.parse(tsSpan)),1]);
             var chart = new google.visualization.LineChart($('#chart').get(0));
             chart.draw(data, {title: 'People on Stairs'});
         });
