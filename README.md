@@ -47,7 +47,7 @@ data: {"data":"742","ttl":"60","published_at":"2016-09-19T11:39:46.644Z","coreid
 npm build
 
 # starts the server
-npm start
+nodemon backend/index.js   
 ```
 
 # Admin Pages
