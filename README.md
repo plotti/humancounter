@@ -12,6 +12,7 @@ Spark Human Counter
 
 # Used APIs
 - Url to access CM property: https://api.spark.io/v1/devices/240034001147343339383037/cm?access_token=800efcf08f1f961e4438ece0da1a20bc5ccfb4f4
+- Url to access human count property: https://api.spark.io/v1/devices/240034001147343339383037/human_count?access_token=800efcf08f1f961e4438ece0da1a20bc5ccfb4f4
 - https://docs.particle.io/reference/firmware/photon/#particle-publish
 
 # Ideas or Blogposts

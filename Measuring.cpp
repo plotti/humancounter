@@ -25,7 +25,8 @@
  *       D2 - TRIG
  *       D6 - ECHO
  */
-
+ 
+#pragma SPARK_NO_PREPROCESSOR
 #include "application.h"
 int cm = 0;
 int threshold_distance = 100;
