@@ -7,14 +7,16 @@
 
     <!-- EXAMPLE SCRIPT -->
     <script>
+
       function initChart(){
-        var data = new google.visualization.DataTable();
+        data = new google.visualization.DataTable();
         data.addColumn('datetime', 'Time');
         data.addColumn('number', 'Humans');
-        return data
       }
+
       // onload callback
       function drawChart() {
+        console.log(data)
         var deviceID = "240034001147343339383037";
         var accessToken = "800efcf08f1f961e4438ece0da1a20bc5ccfb4f4";
         var eventSource = new EventSource("https://api.spark.io/v1/devices/" + deviceID + "/events/?access_token=" + accessToken);
@@ -27,7 +29,6 @@
 
         eventSource.addEventListener('humancount', function(e) {
             console.log("Received Stuff!" + e);
-
             var parsedData = JSON.parse(e.data);
             //var tsSpan   = document.getElementById("published_at");
             data.addRow([(new Date(parsedData["published_at"])),1]);
@@ -38,17 +39,20 @@
 
       // load chart lib
       google.load('visualization', '1', {
-        packages: ['corechart']
+        packages: ['corechart'] 
       });
 
       // call drawChart once google charts is loaded
-      data = google.setOnLoadCallback(initChart);
+      google.setOnLoadCallback(initChart);
       google.setOnLoadCallback(drawChart);
-
     </script>
 
   </head>
   <body>
     <div id="chart" style="width: 100%;"></div>
+  <script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.16.0'><\/script>".replace("HOST", location.hostname));
+//]]></script>
   </body>
+
 </html>
