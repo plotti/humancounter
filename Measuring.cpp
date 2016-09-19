@@ -77,6 +77,7 @@ int ping(pin_t trig_pin, pin_t echo_pin, uint32_t wait, bool info)
 void setup() {
     Serial.begin(115200);
     Particle.variable("cm", cm);
+    Particle.variable("human_count",human_count)
 }
 
 void loop() {

@@ -32,8 +32,8 @@
             var parsedData = JSON.parse(e.data);
             //var tsSpan   = document.getElementById("published_at");
             data.addRow([(new Date(parsedData["published_at"])),1]);
-            var chart = new google.visualization.LineChart($('#chart').get(0));
-            chart.draw(data, {title: 'People on Stairs'});
+            var chart = new google.visualization.BarChart($('#chart').get(0));
+            chart.draw(data, {title: "People on Stairs"});
         });
       }
 
@@ -41,6 +41,7 @@
       google.load('visualization', '1', {
         packages: ['corechart'] 
       });
+      
 
       // call drawChart once google charts is loaded
       google.setOnLoadCallback(initChart);

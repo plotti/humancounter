@@ -1,14 +1,14 @@
 Spark Human Counter
 
-# Admin Pages
-- https://console.particle.io/devices
-- Login with plotti@gmx.net | 
 # Code
 - Measuring.cpp is used to be flashed onto the device.
 
 # Install
 - npm install -g browser-sync
 - npm install webpack -g
+- npm i
+- npm run build
+- npm start
 
 # Used APIs
 - Url to access CM property: https://api.spark.io/v1/devices/240034001147343339383037/cm?access_token=800efcf08f1f961e4438ece0da1a20bc5ccfb4f4
@@ -49,3 +49,8 @@ npm build
 # starts the server
 npm start
 ```
+
+# Admin Pages
+- https://console.particle.io/devices
+- Login with your credentials from particle but make sure to make an accout first. Then ask plotti to make you part of the project, so I can add your email.
+
