@@ -17,3 +17,17 @@ Spark Human Counter
 - Either simply go to http://console.particle.io
 - or run index.html http://bl.ocks.org/d3noob/6bd13f974d6516f3e491
 - http://nvd3.org
+
+# Device Api
+
+Stream
+```
+curl https://api.particle.io/v1/devices/events?access_token=751d57b929c62356ab056ef06536a8c77b6891bb
+=>
+:ok
+
+
+
+
+```  
+
