@@ -5,7 +5,7 @@
   "main": "humanCounter.js",
   "scripts": {
     "build": "webpack --progress --colors --watch",
-    "start": "browser-sync start --serveStatic ./ -f ./dist/   "
+    "start": "browser-sync start --serveStatic ./ -f ./dist/"
   },
   "repository": {
     "type": "git",
