@@ -1,0 +1,35 @@
+{
+  "name": "human_counter",
+  "version": "1.0.0",
+  "description": "Spark Human Counter",
+  "main": "humanCounter.js",
+  "scripts": {
+    "build": "webpack --progress --colors --watch",
+    "start": "browser-sync start --serveStatic ./ -f ./dist/   "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.liip.ch/thomas.ebermann/human_counter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-webpack": "0.0.5",
+    "css-loader": "^0.25.0",
+    "d3": "^3.5.17",
+    "jquery": "^3.1.0",
+    "style-loader": "^0.13.1"
+  },
+  "devDependencies": {
+    "exports-loader": "^0.6.3",
+    "expose-loader": "^0.7.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "imports-loader": "^0.6.5",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  }
+}

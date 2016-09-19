@@ -1,6 +1,4 @@
 // Bo Ericsson, bo@boe.net
-'use strict';
-
 function realTimeChart() {
 
     var version = "0.1.0",
@@ -20,7 +18,7 @@ function realTimeChart() {
     // create the chart
     var chart = function(s) {
         selection = s;
-        if (selection == undefined) {
+        if (!selection) {
             console.error("selection is undefined");
             return;
         }
@@ -125,8 +123,7 @@ function realTimeChart() {
             .attr("y", -20)
             .attr("dy", ".71em")
             .text(function(d) {
-                var text = chartTitle == undefined ? "" : chartTitle;
-                return text;
+                return chartTitle == undefined ? "" : chartTitle;
             });
 
         // define main chart scales
@@ -427,3 +424,5 @@ function realTimeChart() {
     return chart;
 
 } // end realTimeChart function
+
+module.exports = realTimeChart
