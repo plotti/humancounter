@@ -1,16 +1,23 @@
 const path = require('path')
 
 module.exports = {
-    entry: './src/index.js',
+    context: path.resolve(__dirname, 'frontend'),
+    entry: [
+        './index',
+        'webpack/hot/dev-server'
+    ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/assets',
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, 'public'),
+        publicPath: '/',
+        filename: 'bundle.js',
+        hot: true
     },
     module: {
         loaders: [
             {
-                test: /\.js$/, exclude: /(node_modules|bower_components)/, loader: 'babel',
+                test: /\.js$/, exclude: /(node_modules|bower_components)/,
+                include: path.resolve(__dirname, 'frontend'),
+                loader: 'babel',
                 query: {presets: ['es2015']}
             },
             {test: /\.css$/, loader: 'style!css'},
@@ -18,7 +25,9 @@ module.exports = {
             {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=application/octet-stream'},
             {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
             {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url?limit=10000&mimetype=image/svg+xml'},
-            {test: /\json$/, loader: 'json'}
+            {test: /\json$/, loader: 'json'},
+            {test: /\.html$/, loader: 'file'},
+            {test: /\.ico$/, loader: 'file'},
         ]
     },
     node: {
