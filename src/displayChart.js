@@ -1,8 +1,9 @@
-const d3 = require('d3')
-const realTimeChart = require('./realTimeChart')
+import d3 from 'd3'
+import realTimeChart from './realTimeChart'
 
 // mean and deviation for time interval
-let meanMs = 3000, // milliseconds
+// milliseconds
+let meanMs = 3000,
     dev = 550
 
 // define time scale
@@ -19,14 +20,12 @@ let valueScale = d3.scale.linear()
 // generate initial data
 let normal = d3.random.normal(1000, 150)
 let currMs = new Date().getTime() - 300000 - 4000
-let data = d3.range(300).map(function(d, i, arr) {
+let data = d3.range(300).map((d, i, arr) => {
     let value = valueScale(Math.random()) // random data
-    //let value = Math.round((d % 60) / 60 * 95) // ramp data
     let interval = Math.round(timeScale(normal()))
     currMs += interval
     let time = new Date(currMs)
-    let obj = { interval: interval, value: value, time: time, ts: currMs }
-    return obj
+    return {interval, value, time, ts: currMs}
 })
 
 // create the real time chart
@@ -39,11 +38,6 @@ let chart = realTimeChart()
     .height(290)
     .barWidth(1)
     .initialData(data)
-
-console.log("Version: ", chart.version)
-console.dir("Dir++")
-console.trace()
-console.warn("warn")
 
 // invoke the chart
 let chartDiv = d3.select("#viewDiv").append("div")
@@ -61,7 +55,7 @@ function newMockData() {
     console.log('starting generating data')
     let timeout = Math.round(timeScale(normal()))
 
-    setTimeout(function() {
+    setTimeout(function () {
 
         // create new data item
         let now = new Date()
@@ -82,8 +76,6 @@ function newMockData() {
 
     }, timeout)
 }
-// start the data generator
-// dataGenerator()
 
 function newPoint(value) {
     let timeout = Math.round(timeScale(normal()))
@@ -100,7 +92,6 @@ function newPoint(value) {
     // send the datum to the chart
     chart.datum(obj)
 }
-
 
 module.exports = {
     newMockData,
