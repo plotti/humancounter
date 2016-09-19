@@ -6,10 +6,6 @@ Spark Human Counter
 # Code
 - Measuring.cpp is used to be flashed onto the device.
 
-#Live Events API
-```
-- curl https://api.spark.io/v1/devices/240034001147343339383037/events/?access_token=800efcf08f1f961e4438ece0da1a20bc5ccfb4f4
-```
 
 # Used APIs
 - Url to access CM property: https://api.spark.io/v1/devices/240034001147343339383037/cm?access_token=800efcf08f1f961e4438ece0da1a20bc5ccfb4f4
@@ -27,3 +23,15 @@ Spark Human Counter
 - index3.html is based on http://bl.ocks.org/d3noob/6bd13f974d6516f3e491
 - http://nvd3.org
 - index4.html is based on https://www.pubnub.com/blog/2015-03-12-creating-realtime-updating-data-visualizations-with-nvd3/
+
+# Device Api
+
+Stream
+```
+curl "https://api.spark.io/v1/devices/240034001147343339383037/events/?access_token=800efcf08f1f961e4438ece0da1a20bc5ccfb4f4"
+:ok
+
+
+event: humancount
+data: {"data":"742","ttl":"60","published_at":"2016-09-19T11:39:46.644Z","coreid":"240034001147343339383037"}
+```  
