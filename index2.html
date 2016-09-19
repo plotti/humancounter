@@ -7,7 +7,12 @@
 
     <!-- EXAMPLE SCRIPT -->
     <script>
-
+      function initChart(){
+        var data = new google.visualization.DataTable();
+        data.addColumn('datetime', 'Time');
+        data.addColumn('number', 'Humans');
+        return data
+      }
       // onload callback
       function drawChart() {
         var deviceID = "240034001147343339383037";
@@ -24,12 +29,8 @@
             console.log("Received Stuff!" + e);
 
             var parsedData = JSON.parse(e.data);
-            var tsSpan   = document.getElementById("published_at");
-            var data = new google.visualization.DataTable();
-            data.addColumn('datetime', 'Time');
-            data.addColumn('number', 'Humans');
-
-            data.addRow([(Date.parse(tsSpan)),1]);
+            //var tsSpan   = document.getElementById("published_at");
+            data.addRow([(new Date(parsedData["published_at"])),1]);
             var chart = new google.visualization.LineChart($('#chart').get(0));
             chart.draw(data, {title: 'People on Stairs'});
         });
@@ -41,6 +42,7 @@
       });
 
       // call drawChart once google charts is loaded
+      data = google.setOnLoadCallback(initChart);
       google.setOnLoadCallback(drawChart);
 
     </script>
