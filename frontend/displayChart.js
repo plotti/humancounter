@@ -93,7 +93,7 @@ function newPoint(value) {
     chart.datum(obj)
 }
 
-module.exports = {
+export default {
     newMockData,
     newPoint
 }

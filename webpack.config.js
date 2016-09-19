@@ -3,8 +3,7 @@ const path = require('path')
 module.exports = {
     context: path.resolve(__dirname, 'frontend'),
     entry: [
-        './index',
-        'webpack/hot/dev-server'
+        './index.js',
     ],
     output: {
         path: path.resolve(__dirname, 'public'),
@@ -34,5 +33,9 @@ module.exports = {
         fs: 'empty',
         net: 'empty',
         tls: 'empty'
-    }
+    },
+    devServer: {
+        inline: true
+    },
+    compress :true
 }

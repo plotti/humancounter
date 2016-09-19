@@ -13,4 +13,4 @@ function connect() {
     return eventSource
 }
 
-module.exports = connect
+export default connect

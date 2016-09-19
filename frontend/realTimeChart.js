@@ -425,4 +425,4 @@ function realTimeChart() {
 
 } // end realTimeChart function
 
-module.exports = realTimeChart
+export default realTimeChart
