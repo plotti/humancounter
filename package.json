@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Spark Human Counter",
   "main": "humanCounter.js",
+  "engines": {
+   "node": "^6.x"
+  },
   "scripts": {
     "build": "webpack --progress --colors --watch",
     "start": "browser-sync start --serveStatic ./ -f ./frontend/",
