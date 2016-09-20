@@ -1,5 +1,8 @@
 Spark Human Counter
 
+# TLDR
+- A small IOT Device (Photon) with a Echo Sensor measures people walking by @ liip.
+
 # Code
 - Measuring.cpp is used to be flashed onto the device.
 
