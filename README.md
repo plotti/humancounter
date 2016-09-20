@@ -9,7 +9,7 @@ Spark Human Counter
 # Install & Run
 - npm install -g browser-sync
 - npm install webpack -g
-- npm install nodemon
+- npm install -g nodemon
 - npm i
 - npm run build <-- watches develop
 - nodemon backend/index.js  <-- starts the server
