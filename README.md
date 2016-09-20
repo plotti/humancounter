@@ -8,10 +8,10 @@ Spark Human Counter
 
 # Install & Run
 - npm install -g browser-sync
-- npm install webpack -g
+- npm install -g webpack
 - npm install -g nodemon
-- npm i
-- npm run build <-- watches develop
+- npm i -g ( on heroku npm i --save-dev)
+- npm run build <-- watches develop (also do that on heroku)
 - nodemon backend/index.js  <-- starts the server
 
 # Used APIs
