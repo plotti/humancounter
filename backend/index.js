@@ -5,10 +5,10 @@ const path = require('path')
 
 let app = express()
 
-app.use(cors({
-    origin: 'localhost:3006'
+// app.use(cors({
+//     origin: 'localhost:3006'
     // methods: ['GET', 'PUT', 'POST', 'OPTIONS']
-}))
+// }))
 
 app.get('/dupa', (req, res, next) =>
     rp({
