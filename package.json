@@ -10,7 +10,7 @@
     "build": "webpack --progress --colors",
     "start": "browser-sync start --serveStatic ./ -f ./frontend/",
     "watch": "webpack-dev-server",
-    "postinstall": "npm install --dev"
+    "postinstall": "node --version"
   },
   "repository": {
     "type": "git",
