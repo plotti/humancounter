@@ -11,6 +11,9 @@ module.exports = {
         filename: 'bundle.js',
         hot: true
     },
+    resolveLoader: {
+        root: path.resolve(__dirname, 'node_modules')
+    },
     module: {
         loaders: [
             {
