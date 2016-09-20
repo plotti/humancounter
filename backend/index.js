@@ -5,12 +5,11 @@ const path = require('path')
 
 let app = express()
 
-// app.use(cors({
-//     origin: 'localhost:3006'
-    // methods: ['GET', 'PUT', 'POST', 'OPTIONS']
-// }))
+app.use(cors({
+    origin: [/\.herokuapp\.com$/, 'localhost:3006']
+}))
 
-app.get('/dupa', (req, res, next) =>
+app.get('/human_count', (req, res, next) =>
     rp({
         uri: 'https://api.spark.io/v1/devices/240034001147343339383037/human_count',
         qs: {

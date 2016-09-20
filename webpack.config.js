@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
     context: path.resolve(__dirname, 'frontend'),
@@ -40,5 +41,10 @@ module.exports = {
     devServer: {
         inline: true
     },
-    compress :true
+    compress :true,
+    // plugins: [
+    //     new webpack.optimize.UglifyJsPlugin({
+    //         compress: { warnings: false }
+    //     })
+    // ]
 }

@@ -7,7 +7,7 @@
    "node": "^6.x"
   },
   "scripts": {
-    "build": "webpack --progress --colors",
+    "build": "webpack --progress --colors --watch",
     "start": "browser-sync start --serveStatic ./ -f ./frontend/",
     "watch": "webpack-dev-server",
     "postinstall": "node --version"
