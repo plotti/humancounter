@@ -31,8 +31,8 @@ let data = d3.range(300).map((d, i, arr) => {
 // create the real time chart
 let chart = realTimeChart()
     .title("Liipers passing stairs")
-    .yTitle("Y Scale")
-    .xTitle("Time")
+    .yTitle("Liipers [#]")
+    .xTitle("Time [s]")
     .border(true)
     .width(900)
     .height(290)
