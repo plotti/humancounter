@@ -1,6 +1,7 @@
 const rp = require('request-promise')
 const express = require('express')
 const cors = require('cors')
+const path = require('path')
 
 let app = express()
 
@@ -20,7 +21,7 @@ app.get('/dupa', (req, res, next) =>
         .then(data => res.json(data))
         .catch(err => res.status(500).json(err)))
 
-app.use(express.static('public'))
+app.use(express.static(path.resolve(__dirname, '..', 'public')))
 
 const server = app.listen(process.env.PORT || 3006, () => {
     console.log(`Express is listening to ${server.address().port}`)
